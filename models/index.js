@@ -4,6 +4,8 @@ const Tag = require('./Tag');
 
 const Sleep = require('./Sleep');
 
+const SleepTag = require('./SleepTag');
+
 // Sleep belongs to User
 Sleep.belongsTo(User, {
     foreignKey: 'user_id'
@@ -15,15 +17,16 @@ User.hasMany(Sleep, {
     onDelete: 'CASCADE'
 });
 
-// Tag belongs to Sleep
+// Sleep belongs to many Tags
+Sleep.belongsToMany(Tag, {
+    through: SleepTag,
+    foreignKey: 'sleep_id'
+});
+
+// Tag belongs to many Sleeps
 Tag.belongsToMany(Sleep, {
-    through: Sleep,
+    through: SleepTag,
     foreignKey: 'tag_id'
 });
 
-// Sleep will have many Tags
-Sleep.hasMany(Tag, {
-    foreignKey: 'tag_id'
-});
-
-module.exports = { User, Tag, Sleep};
+module.exports = { User, Tag, Sleep, SleepTag};
