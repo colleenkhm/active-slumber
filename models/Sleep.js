@@ -56,6 +56,6 @@ Sleep.init(
         underscored: true,
         modelName: 'sleep',
     }
-)
+);
 
-module.exports = 'sleep'
+module.exports = Sleep;
