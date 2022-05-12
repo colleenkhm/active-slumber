@@ -17,6 +17,7 @@ User.hasMany(Sleep, {
 
 // Tag belongs to Sleep
 Tag.belongsToMany(Sleep, {
+    through: Sleep,
     foreignKey: 'tag_id'
 });
 
