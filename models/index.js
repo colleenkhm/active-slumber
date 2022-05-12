@@ -1,8 +1,8 @@
+const Sleep = require('./Sleep');
+
 const User = require('./User');
 
 const Tag = require('./Tag');
-
-const Sleep = require('./Sleep');
 
 const SleepTag = require('./SleepTag');
 
@@ -29,4 +29,8 @@ Tag.belongsToMany(Sleep, {
     foreignKey: 'tag_id'
 });
 
-module.exports = { User, Tag, Sleep, SleepTag};
+module.exports = { 
+    Sleep,
+    User, 
+    Tag,  
+    SleepTag};

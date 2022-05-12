@@ -8,7 +8,6 @@ const sleepData = [
         dream_sw: true,
         dream_description: 'I had a dream of gum in my hair and shaved it off',
         user_id: 3,
-        tag_id: [5]
     },
     {
         title: 'Zombies Invade',
@@ -17,7 +16,6 @@ const sleepData = [
         dream_sw: true,
         dream_description: 'Zombies were very teethy and tried to eat me.',
         user_id: 2,
-        tag_id: [3, 4]
     },
     {
         title: 'I had a dream that I was floating',
@@ -26,7 +24,6 @@ const sleepData = [
         dream_sw: true,
         dream_description: '',
         user_id: 4,
-        tag_id: []
     },
     {
         title: 'Crazy Chef',
@@ -35,7 +32,6 @@ const sleepData = [
         dream_sw: false,
         dream_description: '',
         user_id: 1,
-        tag_id: [7]
     },
     
 ];
