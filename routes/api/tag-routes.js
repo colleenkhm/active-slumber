@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Sleep, Tag } = require('../../models');
+const { Tag, Sleep, SleepTag } = require('../../models');
 
 // create GET route to get all tags
 router.get('/', async (req, res) => {
