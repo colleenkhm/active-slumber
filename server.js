@@ -1,11 +1,26 @@
+// required packages
 const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
+const session = require('express-session');
+const sequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
-// import sequelize connection
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// set up express session
+const sess = {
+    secret: 'super secret dreams',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new sequelizeStore({
+        db: sequelize
+    })
+};
+
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
