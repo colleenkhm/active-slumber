@@ -4,7 +4,19 @@ const { User, Sleep, Tag } = require('../../models');
 // create GET route to get all sleep entries
 router.get('/', async (req, res) => {
     try {
-        const sleepData = await Sleep.findAll();
+        const sleepData = await Sleep.findAll({
+            attributes: { exclude: ['updatedAt']},
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                },
+                {
+                    model: Tag,
+                    attributes: ['tag_name']
+                }
+            ]
+        });
         res.status(200).json(sleepData);
     } catch (err) {
         res.status(500).json(err);
@@ -15,7 +27,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const sleepData = await Sleep.findByPk(req.params.id, {
-            include: [{model: Tag}]
+            include: [
+                {
+                    model: Tag,
+                    attributes: ['tag_name']
+                }
+            ]
         });
 
         if(!sleepData) {
@@ -48,7 +65,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-    // update a category by its `id` value
+    // update a sleep by its `id` value
     try{
       const sleepData = await Sleep.update(req.body, {
           where: {

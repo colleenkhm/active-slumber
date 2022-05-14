@@ -4,7 +4,6 @@ const { Tag, Sleep, SleepTag } = require('../../models');
 // create GET route to get all tags
 router.get('/', async (req, res) => {
     // find all tags
-    // be sure to include its associated Product data
     try{
       const tagData = await Tag.findAll({
         include:
