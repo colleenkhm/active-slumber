@@ -39,12 +39,32 @@ router.post('/', async (req, res) => {
             hours_slept: req.body.hours_slept,
             dream_sw: req.body.dream_sw,
             dream_description: req.body.dream_description,
+            user_id: req.body.user_id
         });
-        // wasn't quite sure if save needed to be called or if that was directly related to user login
-        req.session.save();
         res.status(200).json(sleepData);
     } catch (err) {
         res.status(400).json(err);
+    }
+});
+
+router.put('/:id', async (req, res) => {
+    // update a category by its `id` value
+    try{
+      const sleepData = await Sleep.update(req.body, {
+          where: {
+            id: req.params.id
+          }
+        }
+      );
+  
+      if (!sleepData) {
+        res.status(404).json({ message: 'Sleep object found with that id!' });
+        return;
+      }
+  
+      res.status(200).json(sleepData);
+    }catch (err){
+      res.status(500).json(err);
     }
 });
 
