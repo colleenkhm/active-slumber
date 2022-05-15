@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Sleep, Tag } = require('../../models');
+const { User, Sleep, Tag, SleepTag } = require('../../models');
 
 // create GET route to get all sleep entries
 router.get('/', async (req, res) => {
@@ -56,8 +56,18 @@ router.post('/', async (req, res) => {
             hours_slept: req.body.hours_slept,
             dream_sw: req.body.dream_sw,
             dream_description: req.body.dream_description,
+            tagIds: req.body.tagIds,
             user_id: req.body.user_id
         });
+        if (req.body.tagIds.length) {
+            const sleepTagIdArr = req.body.tagIds.map((tag_id) => {
+              return {
+                sleep_id: Sleep.id,
+                tag_id,
+              };
+            });
+            return SleepTag.bulkCreate(sleepTagIdArr);
+        }
         res.status(200).json(sleepData);
     } catch (err) {
         res.status(400).json(err);
