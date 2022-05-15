@@ -81,7 +81,7 @@ router.post('/', (req, res) => {
 
 // Update Sleep
 router.put('/:id', (req, res) => {
-    // update product data
+    // update sleep data
     Sleep.update(req.body, {
       where: {
         id: req.params.id,
