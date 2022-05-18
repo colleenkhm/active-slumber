@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active Slumber Home</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
     <div>
         <header>
-            <h1>
+            <h1 class = "headerClass col 3 center-align blackText deep-purple accent-1">
                 <a href="/">Active Slumber</a>
             </h1>
-            <nav>
-                <button id="logout" class="btn-no-style">Logout</button>
-                <a href="/login">Login</a>
-                <a href="/signup">Sign Up</a>
+            <nav class = "navClass row">
+                <button id="logout" class="btn-flat col s4">Logout</button>
+                <a href="/login" class = "col s4">Login</a>
+                <a href="/signup" class = "col s4">Sign Up</a>
             </nav>
         </header>
         <main>
@@ -24,5 +25,6 @@
         </main>
     </div>
     <script src="/javascript/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

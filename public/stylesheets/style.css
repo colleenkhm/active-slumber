@@ -1,0 +1,21 @@
+body {
+    background-color: #b388ff;
+}
+
+.headerClass a {
+    color: black
+}
+
+.navClass {
+    background-color: #ffe683;
+}
+
+.navClass a {
+    color:black
+}
+
+.sleeps {
+    background-color: #ffe683;
+    border: solid black 2px;
+}
+

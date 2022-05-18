@@ -1,14 +1,14 @@
-<div>
+<div class= "containerClass">
     {{#each sleep}}
-    <div>
-        <div>
-            <h2>{{ title }}</h2>
-            <h3>By: {{ user.username }}</h3>
-            <div>{{ hours_slept }}</div>
+    <div class="sleeps">
+        <div class = "row">
+            <h2 class = "col s4">{{ title }}</h2>
+            <h3 class = "col s4">By: {{ user.username }}</h3>
+            <div class = "col s4">Hours slept: {{ hours_slept }}</div>
         </div>
-        <p>{{ sleep_description }}</p>
+        <p>Sleep description: {{ sleep_description }}</p>
         <div>
-            <p>{{ dream_sw }}</p>
+            <p>Dream? {{ dream_sw }}</p>
             <p>{{ dream_description }}</p>
         </div>
         <div>
