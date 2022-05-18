@@ -8,7 +8,9 @@
             <div>{{ dream_sw }}</div>
             <div>{{ dream_description }}</div>
         </div>
-        <div>{{ tag.tag_name }}</div>
+        <div>{{ this.tags.0.tag_name }}</div>
     </div>
     {{/each}}
 </div>
+
+{{!-- {{ tag.tag_name.length }} --}}
