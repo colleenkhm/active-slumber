@@ -19,10 +19,6 @@ router.get('/', async (req,res) => {
                 {
                     model: Tag,
                     attributes:['tag_name'],
-                    // include: {
-                    //     model: Tag,
-                    //     attributes:['tag_name']
-                    // }
                 }
             ]
 

@@ -48,8 +48,8 @@ try{
     req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.username = userData.username;
-        req.session.loggedIn = true;
-        // res.status(200).json(userData);
+        //req.session.loggedIn = true;
+        //res.status(200).json(userData);
         res.json(userData);
     });
 }catch (err) {
