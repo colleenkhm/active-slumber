@@ -2,17 +2,17 @@
     {{#each sleep}}
     <div class="sleeps">
         <div class = "row">
-            <h2 class = "col s4">{{ title }}</h2>
+            <h3 class = "col s5">{{ title }}</h3>
             <h3 class = "col s4">By: {{ user.username }}</h3>
-            <div class = "col s4">Hours slept: {{ hours_slept }}</div>
+            <h3 class = "col s3">Hours slept: {{ hours_slept }}</h3>
         </div>
         <p>Sleep description: {{ sleep_description }}</p>
         <div>
             <p>Dream? {{ dream_sw }}</p>
-            <p>{{ dream_description }}</p>
+            <p>Dream description: {{ dream_description }}</p>
         </div>
         <div>
-            {{#each this.tags}}
+            Tags: {{#each this.tags}}
             <p>{{ tag_name }}</p>
             {{/each}}
         </div>
