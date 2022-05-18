@@ -38,4 +38,13 @@ sequelize.sync({force: false}).then( () => {
     app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
 
+// app.use(function(req, res, next) {
+//     if (req.session.user == null){
+// // if user is not logged-in redirect back to login page //
+//         res.redirect('/login');
+//     }   else{
+//         next();
+//     }
+// });
+
 
