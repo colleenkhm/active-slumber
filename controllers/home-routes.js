@@ -17,19 +17,19 @@ router.get('/', async (req,res) => {
                    attributes:['username'] 
                 },
                 {
-                    model: SleepTag,
-                    attributes:['tag_id'],
-                    include: {
-                        model: Tag,
-                        attributes:['tag_name']
-                    }
+                    model: Tag,
+                    attributes:['tag_name'],
+                    // include: {
+                    //     model: Tag,
+                    //     attributes:['tag_name']
+                    // }
                 }
             ]
 
         });
 
         const sleep = await sleepData.map(post => post.get({plain: true}));
-        res.render('homepage', {sleep});
+        res.render('homepage', { sleep });
     } catch (err) {
         res.status(500).json(err);
     }

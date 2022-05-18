@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
     }catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 // create POST route to create a user
 router.post('/', async (req, res) => {

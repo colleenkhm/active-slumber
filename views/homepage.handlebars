@@ -1,13 +1,14 @@
 <div>
     {{#each sleep}}
     <div>
-        <h2>Title</h2>
-        <div>Hours</div>
+        <h2>{{ title }}</h2>
+        <div>{{ sleep_description }}</div>
+        By: {{ user.username }}
         <div>
-            <div>Dream?</div>
-            <div>Dream</div>
+            <div>{{ dream_sw }}</div>
+            <div>{{ dream_description }}</div>
         </div>
-        <div>Sleep</div>
+        <div>{{ tag.tag_name }}</div>
     </div>
     {{/each}}
 </div>
