@@ -10,6 +10,16 @@ body {
     background-color: #ffe683;
 }
 
+.navClass button{
+    background: none;
+	color: black;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .navClass a {
     color:black
 }
@@ -17,10 +27,29 @@ body {
 .sleeps {
     background-color: #ffe683;
     border: solid black 2px;
+    margin: 50px;
 }
 
 .sleeps p {
     font-size: large;
+}
+
+.tags {
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: green;
+    display: inline-block;
+    padding: 5px;
+}
+
+.login-form {
+    margin: 50px 500px 0px 500px;
+    background-color: white;
+}
+
+.signup-form {
+    margin: 50px 500px 0px 500px;
+    background-color: white;
 }
 
 
