@@ -1,9 +1,19 @@
+/* //b388ff */
+:root {
+    --color-one: #CCCCFF;
+    --color-two: #b388ff;
+    --color-three: whitesmoke;
+    --color-four: #ffe683;
+    --color-five: #5f30af;
+    --color-six: darkgoldenrod;
+}
+
 * {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
-    background-color: #b388ff;
+    background-color: var(--color-two);
 }
 
 .headerClass a {
@@ -70,8 +80,8 @@ body {
     text-shadow: -1px -1px 0 #5f30af, 1px -1px 0 #5f30af, -1px 1px 0 #5f30af, 1px 1px 0 #5f30af;
 }
 
-.dream-description {
-    max-width: 300px;
+.footer-container {
+    display: inline;
 }
 
 .tag-container {
@@ -81,7 +91,7 @@ body {
 .tags {
     border-radius: 10px;
     background-color: #CCCCFF;
-    display: inline-block;
+    display: inline;
     padding: 5px;
     margin: 0 10px; 
     border: 2px whitesmoke solid;
@@ -93,12 +103,26 @@ body {
 .login-form {
     margin: 50px 500px 0px 500px;
     background-color: white;
+    min-width: 300px;
+    display: center;
+    box-shadow: 4px 4px #CCCCFF;
 }
 
 .signup-form {
     margin: 50px 500px 0px 500px;
     background-color: white;
+    box-shadow: 4px 4px #CCCCFF
 }
 
+.login-button {
+    margin: 0 10px 10px 10px;
+    min-width: 60px;
+    font-size: 25px;
+    background-color: #CCCCFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+}
 /*  */
 
