@@ -47,6 +47,10 @@ router.get('/signup', (req, res) => {
 
 router.get('/', (req,res) => {
     console.log(req.session);
-})
+});
+
+router.get('/create-sleep', (req,res) => {
+    res.render('createSleep');
+});
 
 module.exports = router;
