@@ -1,3 +1,7 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 body {
     background-color: #b388ff;
 }
@@ -31,11 +35,11 @@ body {
     background-color: #ffe683;
     margin: 50px;
     border: 2px whitesmoke solid;
-    box-shadow: 3px 3px whitesmoke;
+    box-shadow: 4px 4px whitesmoke;
     border-radius: 4px;
     color: #5f30af;
     text-shadow: 1px 1px whitesmoke;
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .hours-slept {
@@ -54,6 +58,20 @@ body {
 
 .sleeps p {
     font-size: large;
+}
+
+.sleeps strong {
+    /* background-color: white; */
+    padding: 5px 0 0 0;
+    color: white;
+    font-size: 22px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    text-shadow: -1px -1px 0 #5f30af, 1px -1px 0 #5f30af, -1px 1px 0 #5f30af, 1px 1px 0 #5f30af;
+}
+
+.dream-description {
+    max-width: 300px;
 }
 
 .tag-container {
