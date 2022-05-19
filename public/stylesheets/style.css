@@ -3,16 +3,19 @@ body {
 }
 
 .headerClass a {
-    color: black
+    color: whitesmoke;
+    text-shadow: 1px 1px #CCCCFF;
 }
 
 .navClass {
     background-color: #ffe683;
+    box-shadow: 2px 2px darkgoldenrod;
 }
 
 .navClass button{
     background: none;
-	color: black;
+	color: #b388ff;
+    font-size: 13px;
 	border: none;
 	padding: 0;
 	font: inherit;
@@ -21,25 +24,52 @@ body {
 }
 
 .navClass a {
-    color:black
+    color:#b388ff;
 }
 
 .sleeps {
     background-color: #ffe683;
-    border: solid black 2px;
     margin: 50px;
+    border: 2px whitesmoke solid;
+    box-shadow: 3px 3px whitesmoke;
+    border-radius: 4px;
+    color: #5f30af;
+    text-shadow: 1px 1px whitesmoke;
+    padding: 5px;
+}
+
+.hours-slept {
+    font-size: 32px;
+    background-color: #5f30af;
+    min-width: fit-content;
+    border-radius: 10px;
+    color: whitesmoke;
+    text-shadow: none;
+}
+
+.author {
+    font-size: 30px;
+    padding: 0 10px;
 }
 
 .sleeps p {
     font-size: large;
 }
 
+.tag-container {
+    padding: 0 0 0 10px;
+}
+
 .tags {
-    border: solid black 2px;
     border-radius: 10px;
-    background-color: green;
+    background-color: #CCCCFF;
     display: inline-block;
     padding: 5px;
+    margin: 0 10px; 
+    border: 2px whitesmoke solid;
+    color: whitesmoke;
+    text-shadow: 1px 1px #5f30af; 
+    min-width: fit-content;
 }
 
 .login-form {
@@ -52,4 +82,5 @@ body {
     background-color: white;
 }
 
+/*  */
 

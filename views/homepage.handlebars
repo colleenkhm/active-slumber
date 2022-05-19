@@ -3,8 +3,10 @@
     <div class="sleeps">
         <div class = "row">
             <h3 class = "col s5">{{ title }}</h3>
-            <h3 class = "col s4">By: {{ user.username }}</h3>
-            <h3 class = "col s3">Hours slept: {{ hours_slept }}</h3>
+            <h3 class = "col s2 push-s3 hours-slept">Hours slept: {{ hours_slept }}</h3>
+        </div>
+        <div>
+            <h3 class = "col s4 author">By: {{ user.username }}</h3>
         </div>
         <div class="row">
             <p class="col s12">Sleep description: {{ sleep_description }}</p>
@@ -13,9 +15,9 @@
             <p class="col s2">Dream? {{ dream_sw }}</p>
             <p class="col s10">Dream description: {{ dream_description }}</p>
         </div>
-        <div class="row">
+        <div class="row tag-container">
                 {{#each this.tags}}
-                <div class="tags">
+                <div class="tags col s1 center-align">
                     <p>{{ tag_name }}</p>
                 </div>
                 {{/each}}
