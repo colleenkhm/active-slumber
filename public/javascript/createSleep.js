@@ -13,7 +13,7 @@ async function createSleep(event) {
       });
 
     if (sleep_title && sleep_description && hours_slept && dream_sw && dream_description && tagIds) {
-        const response = await fetch('/api/users/signup', {
+        const response = await fetch('/api/users/sleep', {
             method: 'post',
             body: JSON.stringify({
                 sleep_title,
@@ -28,11 +28,11 @@ async function createSleep(event) {
             }
         });
         if (response.ok) {
-            document.location.replace('/login');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
     }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupForm);
+document.querySelector('.sleep-form').addEventListener('submit', createSleep);
