@@ -20,22 +20,29 @@
 
     <!--Enter If Dream of Not -->
     <div>
-        <label for="dream-sw">Dream?</label>
-        <input type="radio" id="dream-sw" />
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Did you have a Dream?</span>
+            </label>
+        </p>
     </div>
 
     <!--Enter Dream Description -->
-    <div>
+    <div class="hide">
         <label for="dream-description">Dream description:</label>
         <textarea type="text" id="dream-description"></textarea>
     </div>
 
     <!--Enter Tags -->
-    <div>
-        <a class="tag-dropdown btn" href="#" data-target="dropdown">Tags</a>
-        <ul id="dropdown" class="dropdown-content">
-            <li><a href="#!">None</a></li>
-        </ul>
+    <div class="input-field col s12">
+        <select multiple>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <label>Select Relevent Tags:</label>
     </div>
 
     <!--Submit Button -->

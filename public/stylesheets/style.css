@@ -5,6 +5,9 @@
 body {
     background-color: #b388ff;
 }
+div{
+    min-height: fit-content;
+}
 
 .headerClass a {
     color: whitesmoke;
