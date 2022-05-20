@@ -1,18 +1,31 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var dropdown1 = document.querySelector('.tag-dropdown');
-//     var dropdownOptions = {
-//         'closeOnClick': true,
-//         'coverTrigger': false,
-//         'hover':true
-//     }
-//     var instanceDropdown1 = M.Dropdown.init(dropdown1, dropdownOptions);
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-  });
-
+const tagMenu = document.getElementById('tagMenu');
+// function to generate sleep tags
+function genSleepTags() {
+    // TODO: Get sleep tag data
+    fetch('/api/tags', {
+        method: 'get'
+    })
+    .then(function(response) {
+        return response.json();
+    })
+    
+    .then(function(data) {
+        for (var i = 0; i < data.length; i++) {
+            var tagOptions = document.createElement('option')
+            tagOptions.innerHTML = data[i].tag_name;
+            tagOptions.value = data[i].id;
+        }
+        tagMenu.appendChild(tagOptions);
+    })
+    .catch(err => {
+        console.error(err)
+    })
+    // TODO: Iterate through object
+    // TODO: Grab tag name and id
+    // TODO: append to dropdown options
+}
+/* <option value="tag_id">tag_name</option> */
+genSleepTags();
 // Function to collect Sleep Info
 async function createSleep(event) {
     event.preventDefault();
@@ -48,5 +61,10 @@ async function createSleep(event) {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+});
 
 document.querySelector('.sleep-form').addEventListener('submit', createSleep);
