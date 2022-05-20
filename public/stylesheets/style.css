@@ -7,7 +7,7 @@
     --color-two: #c0a4f1;
     --color-three: whitesmoke;
     --color-four: #f4e8b7;
-    --color-five: #815ebe;
+    --color-five: #9a78d3;
     --color-six: #ffe683;
 }
 
@@ -64,8 +64,8 @@ body {
     font-size: 22px;
     font-weight: bold;
     padding: 0 10px;
-    color: var(--color-three);
-    background-color: var(--color-one);
+    color: var(--color-five);
+    background-color: var(--color-three);
     border: 2px solid var(--color-three);
     border-radius: 3px;
 }
