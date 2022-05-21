@@ -45,10 +45,6 @@ router.get('/signup', (req, res) => {
     res.render('signup', { loggedIn: req.session.loggedIn });
 });
 
-// router.get('/', (req,res) => {
-//     console.log(req.session);
-// });
-
 router.get('/create-sleep', withAuth, (req,res) => {
     Tag.findAll({})
     .then(tagData =>{

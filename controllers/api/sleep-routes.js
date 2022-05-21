@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
         hours_slept: req.body.hours_slept,
         dream_sw: req.body.dream_sw,
         dream_description: req.body.dream_description,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         tagIds: req.body.tagIds 
     })
     .then((sleep) => {
