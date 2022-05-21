@@ -15,7 +15,7 @@ async function createSleep(event) {
     
     // Post sleep info to the DB
     if (title) {
-        const response = fetch('/api/sleep', {
+        const response = await fetch('/api/sleep', {
             method: 'post',
             body: JSON.stringify({
                 title,
@@ -34,11 +34,10 @@ async function createSleep(event) {
         } else {
             alert(response.statusText);
         }
-    }
-    else{
+    } else {
         alert("You must at least provide a title to create a sleep instance");
     }
-}
+};
 
 // Function to show Dream Descripyion when check box + checked
 function showDreamDescription() {
