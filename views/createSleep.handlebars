@@ -22,14 +22,14 @@
     <div>
         <p>
             <label>
-                <input type="checkbox" class="filled-in" />
+                <input type="checkbox" class="filled-in" id="myCheck" onclick="showDreamDescription()" value="false" />
                 <span>Did you have a Dream?</span>
             </label>
         </p>
     </div>
 
     <!--Enter Dream Description -->
-    <div class="hide">
+    <div id="dream-description-cont">
         <label for="dream-description">Dream description:</label>
         <textarea type="text" id="dream-description"></textarea>
     </div>
@@ -37,12 +37,12 @@
     <!--Enter Tags -->
     <div class="input-field col s12">
         <select multiple id="tagMenu">
-            <option value="" disabled selected>Choose your Tag(s)</option>
+            <option value="" selected>None</option>
             {{#each tag}}
             <option value={{id}}>{{ tag_name }}</option>
             {{/each}}
         </select>
-        <label>Materialize Multiple Select</label>
+        <label>Choose your Tags:</label>
     </div>
 
     <!--Submit Button -->

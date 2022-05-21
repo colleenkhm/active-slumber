@@ -45,18 +45,16 @@ router.get('/signup', (req, res) => {
     res.render('signup', { loggedIn: req.session.loggedIn });
 });
 
-router.get('/', (req,res) => {
-    console.log(req.session);
-});
+// router.get('/', (req,res) => {
+//     console.log(req.session);
+// });
 
-router.get('/create-sleep', (req,res) => {
+router.get('/create-sleep', withAuth, (req,res) => {
     Tag.findAll({})
-    .then(result =>{
-        const tag = result.map(post => post.dataValues);
-        console.log(tag);
+    .then(tagData =>{
+        const tag = tagData.map(post => post.dataValues);
         res.render('createSleep', { tag, loggedIn: req.session.loggedIn });
     })
-    
 });
 
 module.exports = router;
