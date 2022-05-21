@@ -15,7 +15,7 @@ Sleep.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [5, 30]
+                len: [2, 30]
             }
        },
        sleep_description: {
