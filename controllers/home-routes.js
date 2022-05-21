@@ -50,7 +50,13 @@ router.get('/', (req,res) => {
 });
 
 router.get('/create-sleep', (req,res) => {
-    res.render('createSleep', { loggedIn: req.session.loggedIn });
+    Tag.findAll({})
+    .then(result =>{
+        const tag = result.map(post => post.dataValues);
+        console.log(tag);
+        res.render('createSleep', { tag, loggedIn: req.session.loggedIn });
+    })
+    
 });
 
 module.exports = router;

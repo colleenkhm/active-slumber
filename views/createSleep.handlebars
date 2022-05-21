@@ -38,15 +38,12 @@
     <div class="input-field col s12">
         <select multiple id="tagMenu">
             <option value="" disabled selected>Choose your Tag(s)</option>
-            
-
+            {{#each tag}}
+            <option value={{id}}>{{ tag_name }}</option>
+            {{/each}}
         </select>
         <label>Materialize Multiple Select</label>
     </div>
-
-    {{#each tags as |tag|}}
-    {{> tag-details}}
-    {{/each}}
 
     <!--Submit Button -->
     <div class="container">
