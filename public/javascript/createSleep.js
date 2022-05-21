@@ -5,10 +5,9 @@ async function createSleep(event) {
     const sleep_title = document.querySelector('#sleep-title').value.trim();
     const sleep_description = document.querySelector('#sleep-description').value.trim();
     const hours_slept = document.querySelector('#hours-slept').value.trim();
-    const dream_sw = document.querySelector('#dream-sw').value.trim();
-    console.log(dream_sw);
+    const dream_sw = document.getElementById('dream-sw').checked;//  querySelector('#dream-sw').value.trim();
     const dream_description = document.querySelector('#dream-description').value.trim();
-    const tagIds = document.querySelector('.tag-dropdown').value;
+    const tagIds = document.querySelector('.tag-dropdown').value.trim();
     
     // Post sleep info to the DB
     if (sleep_title && sleep_description && hours_slept && dream_sw && dream_description && tagIds) {
@@ -37,16 +36,14 @@ async function createSleep(event) {
 // Function to show Dream Descripyion when check box + checked
 function showDreamDescription() {
     // Get the checkbox
-    var checkBox = document.getElementById("myCheck");
+    var checkBox = document.getElementById("dream-sw");
     // Get the output text
     var text = document.getElementById("dream-description-cont");
   
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
-      checkBox.value = "true"
       text.style.display = "block";
     } else {
-      checkBox.value = "false"
       text.style.display = "none";
     }
 }
