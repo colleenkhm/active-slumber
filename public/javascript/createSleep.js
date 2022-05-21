@@ -7,10 +7,15 @@ async function createSleep(event) {
     const hours_slept = document.querySelector('#hours-slept').value.trim();
     const dream_sw = document.getElementById('dream-sw').checked;//  querySelector('#dream-sw').value.trim();
     const dream_description = document.querySelector('#dream-description').value.trim();
-    const tagIds = document.querySelector('.tag-dropdown').value.trim();
+    
+    // Get tagIds
+    const selected = document.querySelectorAll('#tagMenu option:checked');
+    const tagIds = Array.from(selected).map(el => el.value);
+    console.log(tagIds);
+
     
     // Post sleep info to the DB
-    if (sleep_title && sleep_description && hours_slept && dream_sw && dream_description && tagIds) {
+    if (sleep_title) {
         const response = await fetch('/api/users/sleep', {
             method: 'post',
             body: JSON.stringify({
@@ -19,6 +24,7 @@ async function createSleep(event) {
                 hours_slept,
                 dream_sw,
                 dream_description,
+                user_id,
                 tagIds
             }),
             headers: {
@@ -31,6 +37,7 @@ async function createSleep(event) {
             alert(response.statusText);
         }
     }
+    else{alert("You must at least provide a title to create a sleep instance");}
 }
 
 // Function to show Dream Descripyion when check box + checked

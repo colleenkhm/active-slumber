@@ -37,7 +37,7 @@
     <!--Enter Tags -->
     <div class="input-field col s12">
         <select multiple id="tagMenu">
-            <option value="" selected>None</option>
+            <option value="" disabled="disabled">None</option>
             {{#each tag}}
             <option value={{id}}>{{ tag_name }}</option>
             {{/each}}
