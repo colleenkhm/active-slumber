@@ -1,38 +1,44 @@
 <form id="sleep-form" class="form center-align">
 
     <!--Enter Sleep Title -->
-    <p>{{ userId }}</p>
-    <div>
-        <label for="sleep-title">Title:</label>
-        <input type="text" id="sleep-title" />
+     <div class="row">
+        <div class="input-field col s12">
+            <input type="text" id="sleep-title" />
+            <label for="sleep-title">Title:</label>
+        </div>
     </div>
 
     <!--Enter Sleep Description -->
-    <div>
-        <label for="sleep-description">Sleep description:</label>
-        <textarea type="text" id="sleep-description"></textarea>
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea type="text" id="sleep-description"></textarea>
+            <label for="sleep-description">Sleep description:</label>
+        </div>
     </div>
 
     <!--Enter Hours Slept -->
-    <div>
-        <label for="hours-slept">Hours slept:</label>
-        <input type="text" id="hours-slept" />
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="text" id="hours-slept" />
+            <label for="hours-slept">Hours slept:</label>
+        </div>
     </div>
+    
 
     <!--Enter If Dream of Not -->
-    <div>
-        <p>
-            <label>
-                <input type="checkbox" class="filled-in" id="dream-sw" onclick="showDreamDescription()" />
-                <span>Did you have a Dream?</span>
-            </label>
-        </p>
-    </div>
+    <p>
+        <label>
+            <input type="checkbox" class="filled-in" id="dream-sw" onclick="showDreamDescription()" />
+            <span>Did you have a Dream?</span>
+        </label>
+    </p>
 
     <!--Enter Dream Description -->
-    <div id="dream-description-cont">
-        <label for="dream-description">Dream description:</label>
-        <textarea type="text" id="dream-description"></textarea>
+    <div class="row">
+        <div class="input-field col s12" id="dream-description-cont">
+            <textarea type="text" id="dream-description"></textarea>
+            <label for="dream-description">Dream description:</label>
+        </div>
     </div>
 
     <!--Enter Tags -->
@@ -49,7 +55,7 @@
     <!--Submit Button -->
     <div class="container">
         <div class="center">
-            <button type="submit">Post</button>
+            <button class="form-button" type="submit">Post</button>
         </div>
     </div>
 </form>

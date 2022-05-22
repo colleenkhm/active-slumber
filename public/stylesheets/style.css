@@ -98,6 +98,10 @@ body {
     align-items: right;
 }
 
+#dream-sw{
+    margin: 10px;
+}
+
 .tags {
     border-radius: 10px;
     background-color: #CCCCFF;
@@ -138,16 +142,9 @@ form {
     min-height: 300px;
 }
 
-form button {
-    margin: 0 10px 10px 10px;
-    min-width: 60px;
-    font-size: 25px;
-    background-color: #CCCCFF;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: whitesmoke;
-    border: none;
-    padding: 10px;
-}
+.form-button {
+    margin: 10px 10px 10px 10px;
+
 
 #logout {
     font-size: 17px;
