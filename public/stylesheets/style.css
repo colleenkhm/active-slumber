@@ -1,3 +1,7 @@
+/* OG purple //b388ff */
+/* OG yellow #ffe683; */
+/* text-shadow: -1px -1px 0 var(--color-five), 1px -1px 0 var(--color-five), -1px 1px 0 var(--color-five), 1px 1px 0 var(--color-five); */
+
 :root {
     --color-one: #CCCCFF;
     --color-two: #c0a4f1;
@@ -98,6 +102,10 @@ body {
     align-items: right;
 }
 
+#dream-sw{
+    margin: 10px;
+}
+
 .tags {
     border-radius: 10px;
     background-color: #CCCCFF;
@@ -130,22 +138,16 @@ body {
     padding: 15px;
 }
 
-.login-form {
+form {
     margin: 50px 500px 0px 500px;
     background-color: white;
-    min-width: 300px;
-    display: center;
     box-shadow: 4px 4px #CCCCFF;
+    min-width: 300px;
+    min-height: 300px;
 }
 
-.signup-form {
-    margin: 50px 500px 0px 500px;
-    background-color: white;
-    box-shadow: 4px 4px #CCCCFF
-}
-
-.login-button {
-    margin: 0 10px 10px 10px;
+.form-button {
+    margin: 10px 10px 10px 10px;
     min-width: 60px;
     font-size: 25px;
     background-color: #CCCCFF;
