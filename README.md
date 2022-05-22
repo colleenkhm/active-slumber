@@ -30,7 +30,7 @@
   1. uHaveCRUD
   
   ## Deployment
-  1. Heroku:
+  1. Heroku: https://sleepy-cove-47573.herokuapp.com
   2. Github: https://github.com/colleenkhm/active-slumber
 
   ## Contributing
