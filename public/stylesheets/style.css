@@ -1,7 +1,3 @@
-/* OG purple //b388ff */
-/* OG yellow #ffe683; */
-/* text-shadow: -1px -1px 0 var(--color-five), 1px -1px 0 var(--color-five), -1px 1px 0 var(--color-five), 1px 1px 0 var(--color-five); */
-
 :root {
     --color-one: #CCCCFF;
     --color-two: #c0a4f1;
@@ -134,7 +130,7 @@ body {
     padding: 15px;
 }
 
-.form {
+form {
     margin: 50px 500px 0px 500px;
     background-color: white;
     box-shadow: 4px 4px #CCCCFF;
@@ -142,7 +138,7 @@ body {
     min-height: 300px;
 }
 
-.button {
+form button {
     margin: 0 10px 10px 10px;
     min-width: 60px;
     font-size: 25px;
