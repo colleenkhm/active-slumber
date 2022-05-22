@@ -5,6 +5,7 @@
     --color-four: #f4e8b7;
     --color-five: #9a78d3;
     --color-six: #ffe683;
+    word-wrap: break-word;
 }
 
 body {
