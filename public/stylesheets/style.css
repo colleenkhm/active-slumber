@@ -117,6 +117,10 @@ body {
     font-weight: bold;
 }
 
+#dream-description-cont{
+    display: none;
+}
+
 .hours {
     font-size: 32px;
     background-color: var(--color-five);
@@ -159,5 +163,17 @@ body {
     font-size: 17px;
 }
 
-/*  */
+.login-button {
+    margin: 0 10px 10px 10px;
+    min-width: 60px;
+    font-size: 25px;
+    background-color: #CCCCFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+}
 
+#logout {
+    font-size: 17px;
+}

@@ -15,16 +15,21 @@
                 <a href="/">Sleepily</a>
             </h1>
             <nav class = "navClass row center-align">
+                {{#if loggedIn}}
                 <button id="logout" class="col s4">Logout</button>
-                <a href="/login" class = "col s4">Login</a>
-                <a href="/signup" class = "col s4">Sign Up</a>
+                <a href="/create-sleep" class ="col s4">New Entry</a>
+                {{else}}
+                <a href="/signup" class ="col s4">Sign Up</a>
+                {{/if}}
             </nav>
         </header>
         <main>
             {{{ body }}}
         </main>
     </div>
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
