@@ -145,6 +145,13 @@ form {
 
 .form-button {
     margin: 10px 10px 10px 10px;
+    min-width: 60px;
+    font-size: 25px;
+    background-color: #CCCCFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
 }
 
 
