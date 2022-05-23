@@ -1,15 +1,15 @@
-<div class= "containerClass">
+<div class="row containerClass">
     {{#each sleep}}
     <div class="sleeps">
         <div class = "row heading">
-            <h3 class = "col s5 left-align title">{{ title }}</h3>
-            <h4 class = "col s2 author push-s4 center-align">By {{ user.username }}</h4>
+            <h3 class = "col s12 m4 l10 left-align title">{{ title }}</h3>
+            <h4 class = "col s12 m4 l2 author center-align">By {{ user.username }}</h4>
         </div>
         <div class="row content-container">
             <p class="col s12 sleep-description"><strong>Sleep description:</strong> {{ sleep_description }}</p>
         </div>
         <div class="row">
-            <p class="col s2" content><strong>Dream?</strong> {{ dream_sw }}</p>
+            <p class="col s12" content><strong>Dream?</strong> {{ dream_sw }}</p>
         </div>
         <div class="row content-container">
             <p class="col s12 dream-description "><strong>Dream description:</strong> {{ dream_description }}</p>
