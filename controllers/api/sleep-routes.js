@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
     try {
         const sleepData = await Sleep.findAll({
             attributes: { exclude: ['updatedAt']},
+            order: [['created_at', 'DESC']],
             include: [
                 {
                     model: User,

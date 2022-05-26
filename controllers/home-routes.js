@@ -13,6 +13,7 @@ router.get('/', withAuth, async (req,res) => {
                 'dream_sw',
                 'dream_description'
             ],
+            order: [['created_at', 'DESC']],
             include: [
                 {
                    model: User,
